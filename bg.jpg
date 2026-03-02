@@ -1,0 +1,41 @@
+<style>
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background: url('bg.jpg') center/cover no-repeat;
+  position:relative;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+}
+@keyframes gradientMove {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+section{
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 40px;
+  padding: 80px 10%;
+}
+.hero div{
+  position:relative;
+  z-index:1;
+}
+</style>
